@@ -18,3 +18,25 @@ as `local/chat:0.3`.
 
     $ ./build.sh 0.3
 
+## Images
+
+### Version 0.1
+
+This is a simple netcat chatserver running as `root`.
+
+To build the image and start the container:
+
+    $ ./build.sh 0.1
+    $ docker run --rm --detach \
+        --publish 6601:6666 \
+        --name chat_container_v0.1 \
+        local/chat:0.1
+
+To connect to the server:
+
+    $ ncat localhost 6601
+
+To stop and remove the container:
+
+    $ docker stop chat_container_v0.1
+
