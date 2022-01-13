@@ -101,7 +101,7 @@ To build the image and start the container:
 
 To connect to the server:
 
-    $ ncat localhost 6605
+    $ openssl s_client -connect localhost:6605
 
 To stop and remove the container:
 
@@ -124,7 +124,7 @@ To build the image and start the container:
 
 To connect to the server:
 
-    $ ncat localhost 6606
+    $ openssl s_client -connect localhost:6606
 
 To stop and remove the container:
 
