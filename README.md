@@ -1,6 +1,8 @@
 # chat
 
-A series of docker images for demonstration services.
+A series of docker images for demonstration services. This is based on teaching
+on the WMG BSc Cyber Security. The end goal will be to understand how docker
+works, and how to harden it with tools like SELinux.
 
 ## Dependencies
 
