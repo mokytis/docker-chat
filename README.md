@@ -60,3 +60,25 @@ To stop and remove the container:
 
     $ docker stop chat_container_v0.3
 
+### Version 0.4
+
+This is a simple necat chatserver running as a new user `chatter`. A log file
+is created and volume mounted to the host system.
+
+To build the image and start the container:
+
+    $ ./build.sh 0.4
+    $ docker run --rm --detach \
+        --publish 6604:6666 \
+        --name chat_container_v0.4 \
+        --volume ./logs/:/var/log/chat/ \
+        local/chat:0.4
+
+To connect to the server:
+
+    $ ncat localhost 6604
+
+To stop and remove the container:
+
+    $ docker stop chat_container_v0.4
+
